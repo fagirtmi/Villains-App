@@ -11,23 +11,58 @@
     	</ul>
     </nav>
 </div>
-<h1>Lets get you signed up!</h1>
-    <%= form_for :profile do |f| %>
-        <p>
-            <%= f.label :name %><br>
-            <%= f.text_field :name %>
-        </p>
-      
-        <p>
-            <%= f.label :birthday %><br>
-            <%= date_select "user", "birthday", :start_year => 1910%>
-        </p>
-        <p>
-            <%= f.label : %><br>
-            <%= f.text_field : %>
-        </p>
-        <%= f.submit %>
-    <% end %>
+
+<div class="slideshow-container">
+    <h1>Lets get you signed up!</h1>
+        <%= form_for :profile do |f| %>
+        
+        <div class="mySlides fade">
+             <p>
+                <%= f.label :name %><br>
+                <%= f.text_field :name %>
+            </p>
+            <div class="numbertext">1 / 3</div>
+            <div class="text">So it begins...</div>
+        </div>
+   
+        <div class="mySlides fade">
+            <p>
+                <%= f.label :birthday %><br>
+                <%= date_select "user", "birthday", :start_year => 1910%>
+            </p>
+            <div class="numbertext">2 / 3</div>
+            <div class="text">Going Strong!</div>
+        </div>      
+   
+        <div class="mySlides fade">
+            <p>
+                What are you're greatest achievements as a Villin?<br>
+                <%= f.text_field :achivements %>
+            </p>
+            <%= f.submit %>
+            
+            <div class="numbertext">3 / 3</div>
+            <div class="text">Done! Not so bad, right?</div>
+        </div>
+        
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    <% end %>    
+</div>
+        
+<div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span> 
+    <span class="dot" onclick="currentSlide(2)"></span> 
+    <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+   
+        
+
 <h3 id=description>
    We haven't finished this page yet, but when we do it will be awesome.   
 </h3>
+
+<footer class=bar>
+    <p> &copy;2017 Villains - Fatih Argtmis | Lauren Cook | Katrina Hartley | Alex De La O</p>
+</footer>
