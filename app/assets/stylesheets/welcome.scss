@@ -5,69 +5,89 @@ html,body{
    margin: 0px;
    height: 100%;
    font-family: 'Montserrat Alternates', sans-serif;
-   //background-image: url(/assets/background.jpg);
+   
 }
 //navigation bar css
 
-#header_bar{
-   background-color: #4d4d4d;
-	color:#003366;
+.bar{
+   background-color: #bcbcbc;
 	margin: 0px;
-	margin-left: 0px;
-	margin-right: 0px;
 	height: 60px;
 	width: 100%;
 	overflow: hidden;
+	transition: background 2s ease;
+   box-sizing: border-box;
+   color: #474747;
 }
 #header_title{
    width: 20%;
    font-size: 40px;
-   margin: 20px 0px 0px 0px;
+   margin: 0px;
+   padding-top: 23px;
    float: left;
-   color: white;
+   color: #606060;
+   
+}
+nav{
+  float: left;
+   width: 80%;
+   height: 100%; 
 }
 ul.topnav{
    list-style-type: none;
    margin: 0px;
    padding: 0px;
    overflow: hidden;
-   background-color: black;
    float: left;
    width: 80%;
+   height: 100%;
+   background-color: transparent;
 }
 ul.topnav li{
 	float: left;
    width: 25%;
-   height: 60px;
+   height: 100%;
 }
 ul.topnav li a{
-	text-align:center;
+	text-align: bottom;
 	font-size: 120%;
    text-decoration: none;
-	display:block;
+	display: block;
 	width: 99.5%;
+	height: 100%;
+	box-sizing: border-box;
 	padding: 1em 0;
-	background-color:  #4d4d4d;
-	color: #b3b3b3;
-	border-right: 2px solid #b3b3b3;
-   transition: background 1s ease;
+	background-color: transparent;
+	color: #474747;
+   transition: background 0.5s ease;
 }
-
-ul.topnav a:hover, #active{
-    background-color: black;
-    color:white;
+ul.topnav li a:hover{
+   background-color: #bcbcbc;
+   color: #474747;
 }
-
+.bar:hover{
+   background-color: white;
+}
+#active{
+   background-color: #f44336;
+}
 /* ------------------------------------------------------------- */
+#main{
+   width: 100%;
+   height: 90%;
+}
 #container_left{
   width: 55%;
   padding-left: 5%;
+  float: left;
+  min-width: 560px;
 }
 #description{
    color: #4d4d4d;
    font-size: 150%;
    margin: 0px;
    padding: 50px 0px 100px 0px;
+   min-width: 560px;
    
 }
 .button{
@@ -77,12 +97,12 @@ ul.topnav a:hover, #active{
    height: 60px;
    text-align: center;
    font-size: 120%;
-   
+   margin: 10px 10px 0px 0px;
    color: white;
 }
 #slogan1{
    font-size: 70px;
-   color: red;
+   color: #f44336;
 }
 #slogan2{
    font-size: 200%;
@@ -94,4 +114,21 @@ ul.topnav a:hover, #active{
 }
 #facebook{
    background-color: #3b5998;
+}
+#container_right{
+   position: fixed;
+   right: 0px;
+   top: 10%;
+   box-sizing: border-box;
+   padding-top: 15%;
+   padding-left: 10%;
+   width: 40%;
+   margin: 0px;
+   overflow: hidden;
+   z-index: -1;
+}
+footer{
+   border-top: 10px solid #f44336;
+   text-align: center;
+   height: 10%;
 }
