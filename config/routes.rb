@@ -2,7 +2,9 @@ Rails.application.routes.draw do
   get 'welcome/index'
 
   resources :villains
+  resources :feedback
   root 'welcome#index'
+  
   
   get 'signup' => 'users#new'
   resources :users
