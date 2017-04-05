@@ -1,12 +1,18 @@
 Rails.application.routes.draw do
+  
+  get 'users/index' => 'users#index'
+  root 'users#index'
+  
   get 'welcome/index'
 
   resources :villains
   resources :feedback
-  root 'welcome#index'
-  
   
   get 'signup' => 'users#new'
+  
+  
+  
+  
   resources :users
   
   get 'login' => 'sessions#new'
