@@ -24,6 +24,12 @@
          <%= f.password_field :password, :placeholder => "Password" %> 
          <%= f.submit "Log in", class: "btn-submit" %>
       <% end %>
+      
+      <p>
+        <% if flash[:notice] %>
+            <%= flash[:notice] %>
+        <% end %>
+      </p>
 		
     </div>
 	</div>

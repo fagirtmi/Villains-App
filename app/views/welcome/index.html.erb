@@ -8,7 +8,7 @@
     		<li><a href="/villains/new">Profile</a></li>
     		<li><a href= "/feedback/new">FeedBack</a></li>
     		<li><a href= "">About Us</a></li>
-    		<li><a href="/signup">Sign Out</a></li>
+    		<li><%= link_to "Sign Out", logout_path, method: "delete"%></a></li>
     	</ul>
     </nav>
 </div>
@@ -28,9 +28,6 @@
         
        <h2 id=slogan2>Make the World a little Worse</h2>
     
-        <button class="button" id="facebook" type="button">Sign Up with Facebook</button>
-        <button class="button" id="signup" type="button">Sign up with Email</button>
-        <p>Already have an account? <a href="/login">Log In</a> </p>
     </section>
     
     <section id=container_right>
