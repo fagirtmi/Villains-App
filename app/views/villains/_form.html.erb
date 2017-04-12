@@ -1,0 +1,171 @@
+<div class=bar>
+    <h1 id=header_title>
+        villains
+    </h1>
+    <nav>
+    	<ul class="topnav" id="myTopnav">
+    		<li><a href="/welcome/index">Home</a></li>
+    		<li><a id="active"href="/villains/new">Profile</a></li>
+    		<li><a href= "">About Us</a></li>
+    		<li><a href="/signup">Log In</a></li>
+    		<li><a href= "/feedback/new">FeedBack</a></li>
+    	</ul>
+    </nav>
+</div>
+
+<div class="slideshow-container">
+    <h1>Lets get you signed up!</h1>
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        
+    <%= form_for @villain do |f| %>
+        <div class="mySlides fade">
+            <p>
+                <%= f.label :firstName %> (Dont worry we won't share this info with any heros)<br>
+                <%= f.text_field :firstName, placeholder: "Enter First Name" %>
+            </p>
+            <p>
+                <%= f.label :lastName %><br>
+                <%= f.text_field :lastName, placeholder: "Enter Last Name" %>
+            </p>
+            <p>
+                <%= f.label :alias %> <br>
+                <%= f.text_field :alias, placeholder: "Enter Alias" %>
+            </p>
+             <p>
+                <%= f.label :birthday %><br>
+                <%= f.date_select :birthday, :start_year => 1910%>
+            </p>
+            <p>
+                <%= f.label :gender %><br>
+                <%= f.select(:gender, options_for_select([["Male",1],["Female",2],["Other",3]]))%>
+            </p>
+            
+            
+            <div class="text">
+                <p>1 / 3</p>
+                <p>So it begins...</p>
+            </div>
+        </div>
+   
+        <div class="mySlides fade">
+            <p>
+                <%= f.label :rank %><br>
+                <%= f.select(:rank, options_for_select([["Henchman",1],["Side Kick",2],["Anti-Hero",3],["Villain",4]]))%>
+            </p>
+            <p> Are you cursed?
+                <%= f.radio_button :cursed, "yes"%>
+                <%= f.label :cursed_yes, "Yes" %>
+                <%= f.radio_button :cursed, "no"%>
+                <%= f.label :cursed_no, "Nope" %>
+            </p>
+            <p class="powers">
+                Do you have any Physical Powers?
+                <br>
+                <%= f.label :super_strength %>
+                <%= f.check_box(:super_strength)%>
+                &nbsp;
+                <%= f.label :healing_factor %>
+                <%= f.check_box(:healing_factor)%>
+                &nbsp;
+                <%= f.label :invulnerability %>
+                <%= f.check_box(:invulnerability)%>
+                &nbsp;
+                <%= f.label :duplication %>
+                <%= f.check_box(:duplication)%>
+                &nbsp;
+                <%= f.label :dynamic_camouflage %>
+                <%= f.check_box(:dynamic_camouflage)%>
+                &nbsp; 
+                <%= f.label :invisibility %>
+                <%= f.check_box(:invisibility)%>
+            </p>
+            <p class="powers">
+                Do you have any Enhanced Abilites?
+                <br>
+                <%= f.label :enhanced_awarness%>
+                <%= f.check_box(:enhanced_awarness)%>
+                
+                <%= f.label :enhanced_durability %>
+                <%= f.check_box(:enhanced_durability)%>
+                
+                <%= f.label :enhanced_marksmanship %>
+                <%= f.check_box(:enhanced_marksmanship )%>
+               
+                <%= f.label :enhanced_reflexes %>
+                <%= f.check_box(:enhanced_reflexes)%>
+                
+                <%= f.label :enhanced_senses %>
+                <%= f.check_box(:enhanced_senses)%>
+            </p>
+            <p class="powers">
+                Do you have any Mental Based Abilites?
+                <br>
+                <%= f.label :clairvoyance %>
+                <%= f.check_box(:clairvoyance)%>
+                
+                <%= f.label :energy_manipulation %>
+                <%= f.check_box(:energy_manipulation)%>
+                
+                <%= f.label :immortality %>
+                <%= f.check_box(:immortality)%>
+                
+                <%= f.label :mental_projection %>
+                <%= f.check_box(:mental_projection)%>
+                
+                <%= f.label :psychic %>
+                <%= f.check_box(:psychic)%>
+                
+                <%= f.label :superhuman_intelligence %>
+                <%= f.check_box(:superhuman_intelligence)%>
+                
+                <%= f.label :time_travel %>
+                <%= f.check_box(:time_travel)%>
+                
+                <%= f.label :telepathy %>
+                <%= f.check_box(:telepathy)%>
+                
+                <%= f.label :teleportation %>
+                <%= f.check_box(:teleportation)%>
+            </p>
+            <p>
+                What are you currently looking for?
+                <%= f.select(:searching_for, options_for_select([["Henchman",1],["Side Kick",2],["Anti-Hero",3],["Villain",4]]))%>
+            </p>
+            <p>
+                
+            </p>
+            <div class="text">
+                <p>2 / 3</p>
+                <p>Going Strong!</p>
+            </div>
+        </div>      
+   
+        <div class="mySlides fade">
+            
+            <%= f.submit %>
+        
+            <div class="text">
+                <p>3 / 3</p>
+                <p>Done! Not so bad, right?</p>
+            </div>
+        </div>
+    <% end %> 
+</div>
+        
+<div style="text-align:center;  padding: 0px 50px;">
+    <span class="dot" onclick="currentSlide(1)"></span> 
+    <span class="dot" onclick="currentSlide(2)"></span> 
+    <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+   
+        
+
+<h3 id=description>
+   We haven't finished this page yet, but when we do it will be awesome.   
+</h3>
+
+<footer class=bar>
+    <p> &copy;2017 Villains - Fatih Argtmis | Lauren Cook | Katrina Hartley | Alex De La O</p>
+</footer>

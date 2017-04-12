@@ -13,6 +13,24 @@ class VillainsController < ApplicationController
    def show
       @villain = Villain.find(params[:id])
    end
+   def edit
+      @villain = Villain.find(params[:id])
+   end
+   def update
+      @villain = Villain.find(params[:id])
+      
+      if @villain.update(villain_params)
+         redirect_to @article
+      else
+         render 'edit'
+      end
+   end
+   def destroy
+      @villain = Villain.find(params[:id])
+      @villain.destroy
+      
+      redirect_to 'welcome'
+   end
    
    
    private
