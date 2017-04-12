@@ -6,12 +6,28 @@
     	<ul class="topnav" id="myTopnav">
     		<li><a  href="/users/index">Home</a></li>
     		<li><a id="active" href= "/feedback/new">FeedBack</a></li>
-    		<li><a href= "">About Us</a></li>
+    		<li><a href= "/about_us/new">About Us</a></li>
     		<li><a href="/login">Login</a></li>
     		<li><a href="/signup">Sign Up</a></li>
     	</ul>
     </nav>
 </div>
+
+<%= form_for :profile do |f| %>
+  <p>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </p>
+ 
+  <p>
+    <%= f.label :text %><br>
+    <%= f.text_area :text %>
+  </p>
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
 
 
 

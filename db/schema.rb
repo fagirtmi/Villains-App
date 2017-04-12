@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170405031429) do
+ActiveRecord::Schema.define(version: 20170412025910) do
+
+  create_table "followings", force: :cascade do |t|
+    t.integer  "person_id"
+    t.integer  "follower_id"
+    t.boolean  "blocked"
+    t.integer  "villains_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.index ["villains_id"], name: "index_followings_on_villains_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "first_name"
@@ -19,6 +29,39 @@ ActiveRecord::Schema.define(version: 20170405031429) do
     t.string   "password_digest"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+  end
+
+  create_table "villains", force: :cascade do |t|
+    t.string   "firstName"
+    t.string   "lastName"
+    t.string   "alias"
+    t.string   "birthday"
+    t.integer  "gender"
+    t.integer  "rank"
+    t.string   "cursed"
+    t.boolean  "super_strength"
+    t.boolean  "healing_factor"
+    t.boolean  "invulnerability"
+    t.boolean  "duplication"
+    t.boolean  "dynamic_camouflage"
+    t.boolean  "invisibility"
+    t.boolean  "enhanced_awarness"
+    t.boolean  "enhanced_durability"
+    t.boolean  "enhanced_marksmanship"
+    t.boolean  "enhanced_reflexes"
+    t.boolean  "enhanced_senses"
+    t.boolean  "clairvoyance"
+    t.boolean  "energy_manipulation"
+    t.boolean  "immortality"
+    t.boolean  "mental_projection"
+    t.boolean  "psychic"
+    t.boolean  "superhuman_intelligence"
+    t.boolean  "time_travel"
+    t.boolean  "telepathy"
+    t.boolean  "teleportation"
+    t.integer  "searching_for"
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
   end
 
 end

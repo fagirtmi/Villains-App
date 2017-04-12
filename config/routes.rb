@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
   resources :villains
   resources :feedback
+  resources :about_us
   
   get '/signup' => 'users#new'
   
