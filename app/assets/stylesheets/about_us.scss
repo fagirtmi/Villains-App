@@ -7,8 +7,8 @@ html,body{
    font-family: 'Montserrat Alternates', sans-serif;
    
 }
-//navigation bar css
 
+//navigation bar css
 .bar{
    background-color: #bcbcbc;
 	margin: 0px;
@@ -107,13 +107,13 @@ ul.topnav li a:hover{
    text-decoration: none;
    color: white;
 }
-#slogan1{
-   font-size: 70px;
+#title{
+   font-size: 50px;
    color: #f44336;
 }
-#slogan2{
-   font-size: 200%;
-   color: red;
+#header1{
+   font-size: 30px;
+   color: #000000;
 }
 #signup{
    background-color: #fc2a31;
@@ -122,7 +122,7 @@ ul.topnav li a:hover{
 #facebook{
    background-color: #3b5998;
 }
-#container_right{
+#container_far_left{
    position: fixed;
    right: 0px;
    top: 10%;
@@ -139,3 +139,7 @@ footer{
    text-align: center;
    height: 10%;
 }
+
+
+
+
