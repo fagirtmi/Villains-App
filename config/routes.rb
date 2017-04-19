@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   resources :about_us
   
   get '/signup' => 'users#new'
+  post 'feedback/new' => 'feeback/new'
+  get 'feedback/:id' => 'feedback#show'
   
   resources :users
   
