@@ -1,39 +1,52 @@
-<h2>Sign up</h2>
-
+<div class=bar>
+    <h1 id=header_title>
+        villains
+    </h1>
+    <nav>
+    	<ul class="topnav" id="myTopnav">
+    		<li><a href="/">Home</a></li>
+    		<li><a href="/feedback/new">FeedBack</a></li>
+    		<li><a href="/about_us/new">About Us</a></li>
+    		<li><a href="/users/sign_in">Login</a></li>
+    		<li><a id="active" href="/users/sign_up">Sign Up</a></li>
+    	</ul>
+    </nav>
+</div>
+<section class="creditals_wrapper">
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
   
   <div class="field">
-    <%= f.label :first_name %><p>Don't worry. We won't share this with any heros</p><br />
-    <%= f.text_field :first_name, placeholder: "Real name, please.",autofocus: true  %>
+   <br />
+    <%= f.text_field :first_name, placeholder: "First Name",autofocus: true  %>
   </div>
   
   <div class="field">
-    <%= f.label :last_name %><br />
-    <%= f.text_field :last_name %>
+    <br />
+    <%= f.text_field :last_name, placeholder: "Last Name" %>
   </div>
   
   <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email%>
+   <br />
+    <%= f.email_field :email, placeholder: "Email"%>
   </div>
 
   <div class="field">
-    <%= f.label :password %>
+    
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>
     <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
+    <%= f.password_field :password, autocomplete: "off", placeholder: "Password" %>
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
+    <br />
+    <%= f.password_field :password_confirmation, autocomplete: "off", placeholder: "Confrim Password" %>
   </div>
 
   <div class="actions">
-    <%= f.submit "Sign up" %>
+    <%= f.submit "Sign up", class:"btn-submit" %>
   </div>
 <% end %>
+</section>
 
-<%= render "devise/shared/links" %>

@@ -13,26 +13,19 @@
     </nav>
 </div>
 
-<div id="topBanner">
+<section id="profileBanner">
     <ul>
+        <img class="img-circle" src=<%= image_url('profile.png.gif') %> alt="Profile Pic" height="250" width="250">
+        
+        
         <li><a>Edit Profile</a></li>
         <li><a>Followers</a></li>
         <li><a>Following</a></li>
         <li><a>Something else</a></li>
     </ul>
-</div>
+</section>
 
 <div>
     
 </div>
-
-<p>
-   <strong>First Name:</strong>
-   <%= @villain.alias %>
-</p>
-
-<p>
-   <strong>Last Name:</strong>
-   <%= @villain.users_id %>
-</p>
 

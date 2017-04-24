@@ -1,3 +1,2 @@
 class Feedback < ApplicationRecord
-   
 end

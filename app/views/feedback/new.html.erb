@@ -14,7 +14,7 @@
     </nav>
 </div>
 
-<%= form_for @feedback do |f| %>
+<%= form_for @feedback, url: {action: "create"} do |f| %> 
   <p>
     <%= f.label :title %><br>
     <%= f.text_field :title %>

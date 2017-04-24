@@ -1,7 +1,13 @@
 class VillainsController < ApplicationController
    def new
+      @villain = Villain.find_by(users_id: current_user)
+      if @villain != nil
+            redirect_to @villain
+      else
          @villain = Villain.new
+      end
    end
+   
    def create
       @villain = Villain.new(villain_params)
       @villain.users_id = current_user.id

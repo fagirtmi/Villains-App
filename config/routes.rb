@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   devise_for :users
 
   resources :villains
-  resources :feedbacks
+  resources :feedback
   resources :about_us
   
   get '/villain' => 'villains#home'
