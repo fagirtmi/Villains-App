@@ -1,6 +1,6 @@
-class CreatePeople < ActiveRecord::Migration[5.0]
+class CreateVillains < ActiveRecord::Migration[5.0]
   def change
-    create_table :people do |t|
+    create_table :villains do |t|
       t.string :firstName
       t.string :lastName
       t.string :alias
@@ -29,7 +29,7 @@ class CreatePeople < ActiveRecord::Migration[5.0]
       t.boolean :telepathy
       t.boolean :teleportation
       t.integer :searching_for
-      
+      t.references :users, foreign_key:true
       
       t.timestamps
     end

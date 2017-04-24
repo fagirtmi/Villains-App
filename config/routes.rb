@@ -1,22 +1,13 @@
 Rails.application.routes.draw do
-  root 'users#index'
-  get 'users/index' => 'users#index'
-  
-  
-  get 'welcome/index'
+  get 'home/index'
+  root 'home#index'
+  devise_for :users
 
   resources :villains
-  resources :feedback
+  resources :feedbacks
   resources :about_us
   
+  get '/villain' => 'villains#home'
   get '/signup' => 'users#new'
-  post 'feedback/new' => 'feeback/new'
-  get 'feedback/:id' => 'feedback#show'
-  
-  resources :users
-  
-  get 'login' => 'sessions#new'
-  post 'login' => 'sessions#create'
-  delete 'logout' => 'sessions#destroy'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

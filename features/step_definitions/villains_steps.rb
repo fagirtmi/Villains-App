@@ -7,5 +7,15 @@ When(/^I click on the 'Login' link$/) do
 end
 
 Then(/^I should be on the 'Login' page$/) do
-  pending # Write code here that turns the phrase above into concrete actions
+  expect(page).to have_content('Login')
+end
+
+
+
+When(/^I click on 'Feedback' link$/) do
+   click_link('FeedBack')
+end
+
+Then(/^I should see 'Feedback' page$/) do
+  expect(page). to have_content('FeedBack')
 end

@@ -1,0 +1,32 @@
+<div class=bar>
+    <h1 id=header_title>
+        villains
+    </h1>
+    <nav>
+    	<ul class="topnav" id="myTopnav">
+    		<li><a id="active" href="/home">Home</a></li>
+    		<li><a href="/villains/new"><%= current_user.first_name %></a></li>
+    		<li><a href= "/feedback/new">FeedBack</a></li>
+    		<li><a href= "/about_us/new">About Us</a></li>
+    		<li><%= link_to "Sign Out", destroy_user_session_path, method: "delete"%></a></li>
+    	</ul>
+    </nav>
+</div>
+
+<div id="main">
+    <section id=container_left>
+        <h1 id=slogan1>
+           A Place for Villains
+        </h1>
+        
+       
+    </section>
+    
+    <section id=container_right>
+      <img src="/assets/Villains.png" alt="Logo" height="506" width="544">
+    </section>
+</div>
+
+<footer class=bar>
+    <p> &copy;2017 Villains - Fatih Argtmis | Lauren Cook | Katrina Hartley | Alex De La O</p>
+</footer>

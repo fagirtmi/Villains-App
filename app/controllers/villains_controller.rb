@@ -1,9 +1,10 @@
 class VillainsController < ApplicationController
    def new
-      @villain = Villain.new
+         @villain = Villain.new
    end
    def create
       @villain = Villain.new(villain_params)
+      @villain.users_id = current_user.id
       if @villain.save
          redirect_to @villain
       else
@@ -28,14 +29,13 @@ class VillainsController < ApplicationController
    def destroy
       @villain = Villain.find(params[:id])
       @villain.destroy
-      
       redirect_to 'welcome'
    end
-   
+
    
    private
    def villain_params
-       params.require(:villain).permit(:firstName, :lastName, :alias, :birthday, :gender,
+       params.require(:villain).permit(:alias, :birthday, :gender,
        :rank, :cursed, :super_strength, :healing_factor, :invulnerability, :duplication,
        :dynamic_camouflage, :invisibility, :enhanced_awarness, :enhanced_durability, 
        :enhanced_marksmanship, :enhanced_reflexes, :enhanced_senses, :clairvoyance, 

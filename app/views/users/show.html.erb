@@ -4,8 +4,8 @@
     </h1>
     <nav>
     	<ul class="topnav" id="myTopnav">
-    		<li><a id="active" href="/welcome/index">Home</a></li>
-    		<li><a href="/villains/new">Profile</a></li>
+    		<li><a id="active" href="/home">Home</a></li>
+    		<li><a href="/profile"><%= @user.first_name %></a></li>
     		<li><a href= "/feedback/new">FeedBack</a></li>
     		<li><a href= "/about_us/new">About Us</a></li>
     		<li><%= link_to "Sign Out", logout_path, method: "delete"%></a></li>
@@ -20,7 +20,7 @@
         </h1>
         
        <h3 id=description>
-          Welcome back INSERT USER NAME HERE!!
+          Welcome back <%=@user.first_name %>
        </h3>
     </section>
     

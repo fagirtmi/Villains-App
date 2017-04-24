@@ -4,7 +4,7 @@
     </h1>
     <nav>
     	<ul class="topnav" id="myTopnav">
-    		<li><a href="/welcome/index">Home</a></li>
+    		<li><a href="/user/index">Home</a></li>
     		<li><a id="active"href="/villains/new">Profile</a></li>
     		<li><a href= "">About Us</a></li>
     		<li><a href="/signup">Log In</a></li>
@@ -21,20 +21,12 @@
     <%= form_for @villain do |f| %>
         <div class="mySlides fade">
             <p>
-                <%= f.label :firstName %> (Dont worry we won't share this info with any heros)<br>
-                <%= f.text_field :firstName, placeholder: "Enter First Name" %>
-            </p>
-            <p>
-                <%= f.label :lastName %><br>
-                <%= f.text_field :lastName, placeholder: "Enter Last Name" %>
-            </p>
-            <p>
                 <%= f.label :alias %> <br>
                 <%= f.text_field :alias, placeholder: "Enter Alias" %>
             </p>
              <p>
                 <%= f.label :birthday %><br>
-                <%= f.date_select :birthday, :start_year => 1910%>
+                <%= f.select :birthday, (Time.zone.now.year - 100)..(Time.zone.now.year + 1) %>
             </p>
             <p>
                 <%= f.label :gender %><br>
@@ -138,11 +130,11 @@
             <div class="text">
                 <p>2 / 3</p>
                 <p>Going Strong!</p>
+                 
             </div>
         </div>      
    
         <div class="mySlides fade">
-            
             <%= f.submit %>
         
             <div class="text">

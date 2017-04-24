@@ -5,7 +5,6 @@ html,body{
    margin: 0px;
    height: 100%;
    font-family: 'Montserrat Alternates', sans-serif;
-   
 }
 
 //navigation bar css
@@ -75,9 +74,9 @@ ul.topnav li a:hover{
    color: white;
 }
 /* ------------------------------------------------------------- */
-#main2{
+#main{
    width: 100%;
-   height: 100%;
+   height: 90%;
 }
 #container_left{
   width: 55%;
@@ -87,24 +86,7 @@ ul.topnav li a:hover{
 }
 #about_us_description{
    color: #4d4d4d;
-   font-size: 100%;
-   margin: 0px;
-   padding: 50px 0px 100px 0px;
-   min-width: 560px;
-}
-.button{
-   border-radius: 8px;
-   border: none;
-   width: 300px;
-   height: 60px;
-   text-align: center;
-   font-size: 120%;
-   margin: 10px 10px 0px 0px;
-   color: white;
-}
-.button a{
-   text-decoration: none;
-   color: white;
+   font-size: 20px;
 }
 #title{
    font-size: 50px;
@@ -114,30 +96,11 @@ ul.topnav li a:hover{
    font-size: 30px;
    color: #000000;
 }
-#signup{
-   background-color: #fc2a31;
-   margin-left: 10px;
-}
-#facebook{
-   background-color: #3b5998;
-}
-#container_far_left{
-   position: fixed;
-   right: 0px;
-   top: 10%;
-   box-sizing: border-box;
-   padding-top: 15%;
-   padding-left: 10%;
-   width: 40%;
-   margin: 0px;
-   overflow: hidden;
-   z-index: -1;
-}
+
 footer{
    border-top: 10px solid #f44336;
    text-align: center;
    height: 10%;
-   
 }
 
 
