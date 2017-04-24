@@ -16,13 +16,13 @@
 <section class="creditals_wrapper">
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     <div class="field">
-      <%= f.label :email %><br />
-      <%= f.email_field :email, autofocus: true %>
+      <br />
+      <%= f.email_field :email, autofocus: true, placeholder: "Email" %>
     </div>
   
     <div class="field">
-      <%= f.label :password %><br />
-      <%= f.password_field :password, autocomplete: "off" %>
+      <br />
+      <%= f.password_field :password, autocomplete: "off", placeholder: "Password" %>
     </div>
   
     <% if devise_mapping.rememberable? -%>

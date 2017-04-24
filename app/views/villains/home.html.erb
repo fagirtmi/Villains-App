@@ -8,13 +8,12 @@
     		<li>
                 <a id="profile" href="/villains/new">
                 <img class="img-circle" src=<%= image_url('profile.png.gif') %> alt="Profile Pic" height="50" width="50">
-                    <span id="profil_name">
+                    <span id="profile_name">
                         <%= current_user.first_name %>
                     </span>
                 </a>
     		</li>
-    		<li><a href= "/about_us/new">About Us</a></li>
-    		<li><%= link_to "Sign Out", destroy_user_session_path, method: "delete"%></a></li>
+    		<li class=pull-right><%= link_to "Sign Out", destroy_user_session_path, method: "delete"%></a></li>
     	</ul>
     </nav>
 </div>
@@ -33,6 +32,6 @@
     </section>
 </div>
 
-<footer class=bar>
+<footer>
     <p> &copy;2017 Villains - Fatih Argtmis | Lauren Cook | Katrina Hartley | Alex De La O</p>
 </footer>
